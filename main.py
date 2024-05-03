@@ -32,3 +32,24 @@ class Fighter:
         else:
             print("Боец не выбрал оружие.")
 
+class Monster:
+    def __init__(self, name):
+        self.name = name
+
+    def is_defeated(self):
+        print(f"{self.name} побежден!")
+
+# Пример использования:
+
+fighter = Fighter("Алеша Попович")
+sword = Sword()
+bow = Bow()
+monster = Monster("Тугарин")
+
+fighter.change_weapon(sword)
+fighter.attack()
+monster.is_defeated()
+
+fighter.change_weapon(bow)
+fighter.attack()
+monster.is_defeated()
